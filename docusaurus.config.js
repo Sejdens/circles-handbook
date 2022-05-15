@@ -9,7 +9,11 @@ module.exports = {
   organizationName: 'CirclesUBI',
   projectName: 'circles-handbook',
   themeConfig: {
-    hideableSidebar: true,
+    docs: {
+      sidebar: {
+        hideable: true,
+      },
+    },
     navbar: {
       title: 'Circles Handbook',
       logo: {
@@ -39,6 +43,10 @@ module.exports = {
           to: 'docs/developers/whitepaper',
           activeBasePath: 'docs/developers/whitepaper',
           label: 'Whitepaper',
+          position: 'right',
+        },
+        {
+          type: 'localeDropdown',
           position: 'right',
         },
       ],
@@ -111,6 +119,16 @@ module.exports = {
         },
       ],
       copyright: `Creative Commons Attribution Share Alike 4.0 International`,
+    },
+  },
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        htmlLang: 'en-GB',
+      },
     },
   },
   presets: [
